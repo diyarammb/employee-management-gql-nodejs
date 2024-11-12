@@ -114,13 +114,10 @@ const resolvers = {
       return employee;
     },
 
-    updateEmployee: async (
-      _,
+    updateEmployee: async (_,
       { id, name, age, class: className, subjects, attendance }
     ) => {
-      const employee = await Employee.findByIdAndUpdate(
-        id,
-        { name, age, class: className, subjects, attendance },
+      const employee = await Employee.findByIdAndUpdate(id, { name, age, class: className, subjects, attendance },
         { new: true }
       );
       return employee;

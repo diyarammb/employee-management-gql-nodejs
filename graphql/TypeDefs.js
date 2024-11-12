@@ -34,6 +34,7 @@ const typeDefs = gql`
       password: String!
       role: String!
     ): AuthPayload!
+
     login(email: String!, password: String!): AuthPayload!
     addEmployee(
       name: String!
@@ -42,6 +43,7 @@ const typeDefs = gql`
       subjects: [String!]!
       attendance: [AttendanceInput!]!
     ): Employee!
+
     updateEmployee(
       id: ID!
       name: String
